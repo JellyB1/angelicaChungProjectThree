@@ -1,0 +1,38 @@
+.questionsSection {
+	background: url("./assets/paper.jpg") no-repeat center;
+	background-size: cover;
+}
+
+form {
+	text-align: center;
+
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+
+	fieldset {		
+	
+		
+		background-color: $accentColor;
+
+		margin: auto;
+		
+		height: 50vh;
+		
+		width: 80%;
+	}
+	legend {
+		margin-top: 5%;
+		
+		text-align: center;
+	}
+	label {
+		margin: auto 10%;
+		
+		width: 50%;
+	}
+	button {
+		margin: 5% auto;
+	}
+}

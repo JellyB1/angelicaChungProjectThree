@@ -1,0 +1,20 @@
+header {
+	background: url("./assets/heroHeader.jpg") no-repeat center ;
+	background-size: cover;
+	
+	height: 100vh;
+	
+	display: flex;
+	align-items: center;
+
+	
+	section {
+		background: $accentColor;
+		
+		padding: 2%;
+
+		width: 55%;
+
+		text-align: center;
+	}
+}

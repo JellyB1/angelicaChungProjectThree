@@ -1,0 +1,61 @@
+html {
+	color: $mainFontColor;
+	font-size: 10px;
+}
+
+button,
+label,
+legend {
+	@include fontSize(20);
+
+	border: 3px solid $mainFontColor;
+	border-radius: 10px;
+	
+	background-color: $mainFontColor;
+	color: $secondaryFontColor;
+
+	padding: 15px;
+
+	transition: border 200ms ease-in-out;
+}
+
+button:hover,
+button:focus,
+label:hover,
+label:focus {
+	border: 3px solid $secondaryAccentColor;
+	cursor: pointer;
+}
+
+h1 {
+	@include fontSize(80);
+	
+	margin: 0;
+}
+
+h2 {
+	@include fontSize(40);
+	margin-bottom: 10%;
+}
+
+legend {
+	@include fontSize(20);
+}
+
+label {
+	@include fontSize(25);
+}
+
+p {
+	@include fontSize(30);
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1500px;
+}

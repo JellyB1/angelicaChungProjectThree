@@ -1,0 +1,12 @@
+$mainFontColor: #2B2D2F;
+$secondaryFontColor: #F9F9F9;
+
+$accentColor: rgba(245,245,245,0.8);
+$secondaryAccentColor: #D00000;
+// $mainColor: ;
+// $secondaryColor: ;
+
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}

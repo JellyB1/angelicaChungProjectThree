@@ -234,3 +234,116 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  color: #2B2D2F;
+  font-size: 10px;
+}
+
+button,
+label,
+legend {
+  font-size: 20px;
+  font-size: 2rem;
+  border: 3px solid #2B2D2F;
+  border-radius: 10px;
+  background-color: #2B2D2F;
+  color: #F9F9F9;
+  padding: 15px;
+  -webkit-transition: border 200ms ease-in-out;
+  transition: border 200ms ease-in-out;
+}
+
+button:hover,
+button:focus,
+label:hover,
+label:focus {
+  border: 3px solid #D00000;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 80px;
+  font-size: 8rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-size: 4rem;
+  margin-bottom: 10%;
+}
+
+legend {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+label {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1500px;
+}
+
+header {
+  background: url("./assets/heroHeader.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header section {
+  background: rgba(245, 245, 245, 0.8);
+  padding: 2%;
+  width: 55%;
+  text-align: center;
+}
+
+.questionsSection {
+  background: url("./assets/paper.jpg") no-repeat center;
+  background-size: cover;
+}
+
+form {
+  text-align: center;
+}
+
+form fieldset {
+  background-color: rgba(245, 245, 245, 0.8);
+  margin: auto;
+  height: 50vh;
+  width: 80%;
+}
+
+form legend {
+  margin-top: 5%;
+  text-align: center;
+}
+
+form label {
+  margin: auto 10%;
+  width: 50%;
+}
+
+form button {
+  margin: 5% auto;
+}
