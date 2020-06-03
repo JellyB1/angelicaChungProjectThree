@@ -117,7 +117,8 @@ sortingHat.houses = {
 	},
 }
 
-sortingHat.resultsArray = ["E", "N", "T", "J"];
+sortingHat.resultsArray = [];
+const _shResultsArray = sortingHat.resultsArray;
 
 sortingHat.resultsString = sortingHat.resultsArray.join("");
 const _shResultsString = sortingHat.resultsString;
@@ -128,16 +129,48 @@ const _shUsersHouse = sortingHat.usersHouse;
 
 
 sortingHat.init = function() {
+	
 	$("input").on("click", function (event) {
-		// event.preventDefault();
-		console.log($(this));
+	
 		const _val = $(this).val();
-		console.log(_val);
-		// if (_val) {
-		// 	sortingHat.mbptTraits[_val]++;
-		// 	console.log(`${_val} is now at ${sortingHat.mbptTraits[_val]}`);
-		// };
-	})
+		
+		if (_val) {
+			sortingHat.mbptTraits[_val]++;
+			console.log(`${_val} is now at ${sortingHat.mbptTraits[_val]}`);
+		};
+	});
+
+	$("button[type='submit']").on("click", function(event){
+		event.preventDefault();
+
+		const _traits = sortingHat.mbptTraits;
+
+		if (_traits["extrovert"] > _traits["introvert"]) {
+			_shResultsArray.push("E");
+		} else if (_traits["extrovert"] < _traits["introvert"]) {
+			_shResultsArray.push("I");
+		}
+
+		if (_traits["intuitive"] > _traits["sensing"]) {
+			_shResultsArray.push("N");
+		} else if (_traits["intuitive"] < _traits["sensing"]) {
+			_shResultsArray.push("S");
+		}
+
+		if (_traits["thinking"] > _traits["feeling"]) {
+			_shResultsArray.push("T");
+		} else if (_traits["thinking"] < _traits["feeling"]) {
+			_shResultsArray.push("F");
+		}
+		
+		if (_traits["perceptive"] > _traits["judging"]) {
+			_shResultsArray.push("P");
+		} else if (_traits["perceptive"] < _traits["judging"]) {
+			_shResultsArray.push("J");
+		}
+
+		
+	});
 };
 
 
