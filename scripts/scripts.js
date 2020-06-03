@@ -1,4 +1,4 @@
-// Wait until html is full loaded to run jQuery
+
 
 // Initiate global variables, arrays, objects
 // 1.	variable to store results (Array);
@@ -22,112 +22,136 @@
 //		c. DESCRIPTION;
 // 2.	Cache element to new variable (w/HTML) to include House Crest;
 
-// Icons
-// Hufflepuff crest https://thenounproject.com/term/harry-potter/1704951/
-// Slytherin crest https://thenounproject.com/term/harry-potter/1704952/
-// Gryffindor crest https://thenounproject.com/term/harry-potter/1704953/
-// Ravenclaw crest https://thenounproject.com/term/harry-potter/1704954/
-// Sorting hat https://thenounproject.com/term/harry-potter/337533/
 
-const $label = $("label");
-
-
-
+// Create my namescape object
 const sortingHat = {};
 
-
-
-
-
+// Create an object to hold all my trait variables, keep it clean!
 sortingHat.mbptTraits = {
-	extrovert: 0,
+	extrovert: 5,
 	introvert: 0,
-	sensing: 0,
+	sensing: 5,
 	intuitive: 0,
-	thinking: 0,
+	thinking: 5,
 	feeling: 0,
-	judging: 0,
+	judging: 5,
 	perceptive: 0,
 };
 
+// Boom! All the data in one spot to parse easily
 sortingHat.houses = {
 	ENFJ: {
-		house: "gryffindor",
+		crest: "./styles/assets/gryffindorCrest.svg",
+		house: "Gryffindor",
 		description: "desc"
 	},
 	ENFP: {
-		house: "gryffindor",
+		crest: "./styles/assets/gryffindorCrest.svg",
+		house: "Gryffindor",
 		description: "desc"
 	},
 	ENTP: {
-		house: "gryffindor",
+		crest: "./styles/assets/gryffindorCrest.svg",
+		house: "Gryffindor",
 		description: "desc"
 	},
 	ESTP: {
-		house: "gryffindor",
+		crest: "./styles/assets/gryffindorCrest.svg",
+		house: "Gryffindor",
 		description: "desc"
 	},
 	ESFJ: {
-		house: "hufflepuff",
+		crest: "./styles/assets/hufflepuffCrest.svg",
+		house: "Hufflepuff",
 		description: "desc"
 	},
 	ESFP: {
-		house: "hufflepuff",
+		crest: "./styles/assets/hufflepuffCrest.svg",
+		house: "Hufflepuff",
 		description: "desc"
 	},
 	ISFJ: {
-		house: "hufflepuff",
+		crest: "./styles/assets/hufflepuffCrest.svg",
+		house: "Hufflepuff",
 		description: "desc"
 	},
 	ISFP: {
-		house: "hufflepuff",
+		crest: "./styles/assets/hufflepuffCrest.svg",
+		house: "Hufflepuff",
 		description: "desc"
 	},
 	ISTP: {
-		house: "slytherin",
+		crest: "./styles/assets/slytherinCrest.svg",
+		house: "Slytherin",
 		description: "desc"
 	},
 	ENTJ: {
-		house: "slytherin",
+		crest: "./styles/assets/slytherinCrest.svg",
+		house: "Slytherin",
 		description: "desc"
 	},
 	ESTJ: {
-		house: "slytherin",
+		crest: "./styles/assets/slytherinCrest.svg",
+		house: "Slytherin",
 		description: "desc"
 	},
 	ISTJ: {
-		house: "slytherin",
+		crest: "./styles/assets/slytherinCrest.svg",
+		house: "Slytherin",
 		description: "desc"
 	},
 	INFJ: {
-		house: "ravenclaw",
+		crest: "./styles/assets/ravenclawCrest.svg",
+		house: "Ravenclaw",
 		description: "desc"
 	},
 	INFP: {
-		house: "ravenclaw",
+		crest: "./styles/assets/ravenclawCrest.svg",
+		house: "Ravenclaw",
 		description: "desc"
 	},
 	INTP: {
-		house: "ravenclaw",
+		crest: "./styles/assets/ravenclawCrest.svg",
+		house: "Ravenclaw",
 		description: "desc"
 	},
 	INTJ: {
-		house: "ravenclaw",
+		crest: "./styles/assets/ravenclawCrest.svg",
+		house: "Ravenclaw",
 		description: "desc"
 	},
 }
 
 sortingHat.resultsArray = [];
+
+const _shHouses = sortingHat.houses;
 const _shResultsArray = sortingHat.resultsArray;
 
-sortingHat.resultsString = sortingHat.resultsArray.join("");
-const _shResultsString = sortingHat.resultsString;
+// Create my conditional logic to run upon page submit
+function returnHouse() {
+	// Take array and turn into a STR to compare to keys in .houses
+	
+	sortingHat.resultsString = sortingHat.resultsArray.join("");
 
+	
+	// Grab the related crest, house, description
+	
+	const _shUsersResults = sortingHat.houses[sortingHat.resultsString];
+	
+	let usersCrest = _shUsersResults["crest"];
+	let usersHouse = _shUsersResults["house"];
+	let usersDescription = _shUsersResults["description"];
+	
+	// Display to the DOM, bc witchcraft
 
-sortingHat.usersHouse = sortingHat.houses[_shResultsString]["house"];
-const _shUsersHouse = sortingHat.usersHouse;
+	$(".imageContainer img").attr("src", usersCrest);
+	$(".mbptResults").text(usersHouse);
+	$(".mbptDescription").text(usersDescription);
 
+	
+};
 
+// Create my gameplan to execute once page has loaded
 sortingHat.init = function() {
 	
 	$("input").on("click", function (event) {
@@ -136,15 +160,18 @@ sortingHat.init = function() {
 		
 		if (_val) {
 			sortingHat.mbptTraits[_val]++;
-			console.log(`${_val} is now at ${sortingHat.mbptTraits[_val]}`);
 		};
+
+		// add class .disabled attribute
 	});
 
+	// .one()
+	// .select(), , if(has it already happened?)
 	$("button[type='submit']").on("click", function(event){
 		event.preventDefault();
 
 		const _traits = sortingHat.mbptTraits;
-
+		
 		if (_traits["extrovert"] > _traits["introvert"]) {
 			_shResultsArray.push("E");
 		} else if (_traits["extrovert"] < _traits["introvert"]) {
@@ -162,57 +189,34 @@ sortingHat.init = function() {
 		} else if (_traits["thinking"] < _traits["feeling"]) {
 			_shResultsArray.push("F");
 		}
-		
+
 		if (_traits["perceptive"] > _traits["judging"]) {
 			_shResultsArray.push("P");
 		} else if (_traits["perceptive"] < _traits["judging"]) {
 			_shResultsArray.push("J");
 		}
-
-		
+	
+		returnHouse();
 	});
 };
 
-
-
-
-console.log(_shResultsString);
-
-console.log(_shUsersHouse);
-
-
-
-// const $radio = $("input[type='radio']");
-// console.log($radio);
-
-// console.log($("input[type='radio']").val())
-
-
+// Wait until html is full loaded to run jQuery
 $(document).ready(function(){
 	sortingHat.init();
 });
 
-
-// 	init: (results) => {
-	// 		let usersHouse = this.houses[results]["house"];
-	// 		let resultsDescription = this.houses[results]["description"]
-// 	}
+//🐥🐥🐥🐥
 	
-	
+// A BIG Thank you to Whitney Rosenberg from Noun Project for these amazing house crests!
 
-// }
+// Hufflepuff crest 
+// https://thenounproject.com/term/harry-potter/1704951/
 
-// console.log(sortingHat.resultsString);
+// Slytherin crest 
+// https://thenounproject.com/term/harry-potter/1704952/
 
-// console.log(sortingHat.init(sortingHat.resultsString));
+// Gryffindor crest 
+// https://thenounproject.com/term/harry-potter/1704953/
 
-
-
-	
-	
-	
-	
-	
-
-
-
+// Ravenclaw crest 
+// https://thenounproject.com/term/harry-potter/1704954/

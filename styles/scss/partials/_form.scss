@@ -4,28 +4,36 @@
 }
 
 form {
+	// height: 100vh;
 	text-align: center;
 
-	// display: flex;
-	// flex-direction: column;
-	// align-items: center;
-	// justify-content: center;
 
 	fieldset {		
-	
 		
+		// position: absolute;
+		// left: 10%;
+
 		background-color: $accentColor;
+		border: none;
+		border-radius: 10px;
 
 		margin: auto;
+		margin-top: 5%;
 		
 		height: 50vh;
 		
 		width: 80%;
 	}
+
 	legend {
-		margin-top: 5%;
 		
+		position: relative;
+		left: calc(50% - (170px / 2));
+		
+
 		text-align: center;
+
+		width: 170px;
 	}
 	label {
 		margin: auto 10%;
@@ -33,6 +41,9 @@ form {
 		width: 50%;
 	}
 	button {
+		
 		margin: 5% auto;
+		// margin: 90vh auto 0px;
+		
 	}
 }

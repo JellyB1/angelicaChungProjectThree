@@ -329,14 +329,19 @@ form {
 
 form fieldset {
   background-color: rgba(245, 245, 245, 0.8);
+  border: none;
+  border-radius: 10px;
   margin: auto;
+  margin-top: 5%;
   height: 50vh;
   width: 80%;
 }
 
 form legend {
-  margin-top: 5%;
+  position: relative;
+  left: calc(50% - (170px / 2));
   text-align: center;
+  width: 170px;
 }
 
 form label {
