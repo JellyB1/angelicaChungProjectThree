@@ -1,0 +1,35 @@
+.resultsSection {
+	background: url("./assets/paper.jpg") no-repeat center;
+	background-size: cover;
+	
+	// height: 100vh;
+	
+	.mbptResults {
+		
+
+		width: 100%;
+		
+		text-align: center;
+	}
+	section {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;	
+
+		padding-bottom: 10%;
+	}
+
+	.mbptDescription {
+		@include fontSize(25);
+	}
+
+	.mbptDescription,
+	.imageContainer {
+		width: 45%;
+	}
+
+	img {
+		width: 100%;
+	}
+}
