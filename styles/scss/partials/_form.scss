@@ -7,7 +7,7 @@ form {
 	
 	position: relative;
 	
-	height: 80vh;
+	min-height: 80vh;
 
 	text-align: center;
 
@@ -22,11 +22,29 @@ form {
 		left: 5%;
 		right:5%;
 
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+
 		margin: auto;
 		
-		height: 50vh;
-		
+		min-height: 50vh;
+		height: 520px;
+
 		width: 80%;
+
+		h2 {
+			
+			width: 85%;
+			
+		}
+		label {
+	
+			margin-bottom: 3%;
+			
+			width: 90%;
+		}
 	}
 
 	button {
