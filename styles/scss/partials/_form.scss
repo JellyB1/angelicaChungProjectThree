@@ -30,7 +30,14 @@ form {
 	button {
 		
 		margin: 5% auto;
-		// margin: 90vh auto 0px;
 		
+	}
+
+	.activeButton {
+		border: 3px solid $secondaryAccentColor;
+	}
+
+	.disabledButton {
+		opacity: 50%;
 	}
 }

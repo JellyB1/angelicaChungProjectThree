@@ -152,22 +152,22 @@ function returnHouse() {
 };
 
 
-function scroll() {
-	$('fieldset.question').animate({
-		scrollBottom: $("$(this)").offset().bottom
-	}, 500);
-} ;
+
 // Create my gameplan to execute once page has loaded
 sortingHat.init = function() {
-	
+	$("label").on("click", function(){
+		$(this).toggleClass("activeButton");
+	})
+
 	$("input").on("click", function (event) {
 	
 		const _val = $(this).val();
 		
 		if (_val) {
 			sortingHat.mbptTraits[_val]++;
-		};
-		scroll();
+		}
+		
+		
 		// add class .disabled attribute
 		// $("fieldset").animate({
 		// 	scrollBottom: $( $(this).class(".question").offset().top), 500 )
