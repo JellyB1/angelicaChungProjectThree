@@ -304,6 +304,10 @@ p {
   max-width: 1500px;
 }
 
+.displayDisabled {
+  display: none;
+}
+
 header {
   background: url("./assets/heroHeader.jpg") no-repeat center;
   background-size: cover;
@@ -326,6 +330,7 @@ header section {
 .questionsSection {
   background: url("./assets/paper.jpg") no-repeat center;
   background-size: cover;
+  margin: auto;
 }
 
 form {
@@ -356,7 +361,7 @@ form fieldset {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  min-height: 50vh;
+  min-height: 60vh;
   height: 520px;
   width: 80%;
 }
@@ -465,7 +470,12 @@ form .activeButton {
 .resultsSection {
   background: url("./assets/paper.jpg") no-repeat center;
   background-size: cover;
-  height: auto;
+  margin: auto;
+}
+
+.resultsSection h2 {
+  margin-top: 0;
+  padding: 10%;
 }
 
 .resultsSection .mbptResults {
@@ -502,4 +512,17 @@ form .activeButton {
 
 .resultsSection img {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .resultsSection section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .resultsSection .mbptDescription,
+  .resultsSection .imageContainer {
+    width: 90%;
+  }
 }

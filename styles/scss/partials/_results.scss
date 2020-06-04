@@ -1,18 +1,22 @@
 .resultsSection {
+
 	background: url("./assets/paper.jpg") no-repeat center;
 	background-size: cover;
 
-	height: auto;
-	
-	// height: 100vh;
-	
+	margin: auto ;
+
+	h2 {
+		margin-top: 0;
+		padding: 10%;
+	}
+
 	.mbptResults {
-		
 
 		width: 100%;
 		
 		text-align: center;
 	}
+
 	section {
 		display: flex;
 		flex-flow: row wrap;
@@ -33,5 +37,19 @@
 
 	img {
 		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.resultsSection {
+		
+		section {
+			flex-direction: column-reverse;
+		}
+		
+		.mbptDescription,
+		.imageContainer {
+			width: 90%;
+		}
 	}
 }

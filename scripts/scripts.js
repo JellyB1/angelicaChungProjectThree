@@ -103,6 +103,13 @@ const _shHouses = sortingHat.houses;
 const _shResultsArray = sortingHat.resultsArray;
 
 // Create my conditional logic to run upon page submit
+
+function toggleDisplay() {
+	$(".questionsSection").addClass("displayDisabled");
+	$(".resultsSection").removeClass("displayDisabled");
+
+}
+
 function returnHouse() {
 	// Take array and turn into a STR to compare to keys in .houses
 	
@@ -123,7 +130,7 @@ function returnHouse() {
 	$(".mbptResults").text(usersHouse);
 	$(".mbptDescription").text(usersDescription);
 
-	
+	// toggleDisplay();
 };
 
 
@@ -176,7 +183,8 @@ sortingHat.init = function() {
 		} else if (_traits["perceptive"] < _traits["judging"]) {
 			_shResultsArray.push("J");
 		}
-	
+		
+		toggleDisplay();
 		returnHouse();
 	});
 };
