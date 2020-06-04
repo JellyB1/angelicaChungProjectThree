@@ -329,6 +329,8 @@ header section {
 }
 
 form {
+  position: relative;
+  height: 80vh;
   text-align: center;
 }
 
@@ -336,26 +338,105 @@ form fieldset {
   background-color: #F9F9F9;
   border: none;
   border-radius: 10px;
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+  right: 5%;
   margin: auto;
   height: 50vh;
   width: 80%;
 }
 
-form label {
-  margin: auto 10%;
-  width: 50%;
-}
-
 form button {
-  margin: 5% auto;
+  position: absolute;
+  left: calc(50% - 50px);
+  right: calc(50% - 50px);
+  top: calc(50% - 30px);
+  margin: auto;
 }
 
 form .activeButton {
   border: 3px solid #D00000;
 }
 
-form .disabledButton {
-  opacity: 50%;
+.question1 {
+  z-index: 100;
+}
+
+.question2 {
+  z-index: 95;
+}
+
+.question3 {
+  z-index: 90;
+}
+
+.question4 {
+  z-index: 85;
+}
+
+.question5 {
+  z-index: 80;
+}
+
+.question6 {
+  z-index: 75;
+}
+
+.question7 {
+  z-index: 70;
+}
+
+.question8 {
+  z-index: 65;
+}
+
+.question9 {
+  z-index: 60;
+}
+
+.question10 {
+  z-index: 55;
+}
+
+.question11 {
+  z-index: 50;
+}
+
+.question12 {
+  z-index: 45;
+}
+
+.question13 {
+  z-index: 40;
+}
+
+.question14 {
+  z-index: 35;
+}
+
+.question15 {
+  z-index: 30;
+}
+
+.question16 {
+  z-index: 25;
+}
+
+.question17 {
+  z-index: 20;
+}
+
+.question18 {
+  z-index: 15;
+}
+
+.question19 {
+  z-index: 10;
+}
+
+.question20 {
+  z-index: 5;
 }
 
 .resultsSection {
