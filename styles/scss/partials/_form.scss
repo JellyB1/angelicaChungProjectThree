@@ -4,37 +4,24 @@
 }
 
 form {
-	// height: 100vh;
+	
 	text-align: center;
 
-
 	fieldset {		
-		
-		// position: absolute;
-		// left: 10%;
 
-		background-color: $accentColor;
+		background-color: $secondaryFontColor;
 		border: none;
 		border-radius: 10px;
 
 		margin: auto;
-		margin-top: 5%;
+		// padding: 10% auto;
 		
 		height: 50vh;
 		
 		width: 80%;
 	}
 
-	legend {
-		
-		position: relative;
-		left: calc(50% - (170px / 2));
-		
-
-		text-align: center;
-
-		width: 170px;
-	}
+	
 	label {
 		margin: auto 10%;
 		

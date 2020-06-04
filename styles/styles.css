@@ -274,6 +274,11 @@ h2 {
   margin-bottom: 10%;
 }
 
+h3 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
 legend {
   font-size: 20px;
   font-size: 2rem;
@@ -328,20 +333,12 @@ form {
 }
 
 form fieldset {
-  background-color: rgba(245, 245, 245, 0.8);
+  background-color: #F9F9F9;
   border: none;
   border-radius: 10px;
   margin: auto;
-  margin-top: 5%;
   height: 50vh;
   width: 80%;
-}
-
-form legend {
-  position: relative;
-  left: calc(50% - (170px / 2));
-  text-align: center;
-  width: 170px;
 }
 
 form label {
@@ -351,4 +348,45 @@ form label {
 
 form button {
   margin: 5% auto;
+}
+
+.resultsSection {
+  background: url("./assets/paper.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.resultsSection .mbptResults {
+  width: 100%;
+  text-align: center;
+}
+
+.resultsSection section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10%;
+}
+
+.resultsSection .mbptDescription {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+.resultsSection .mbptDescription,
+.resultsSection .imageContainer {
+  width: 45%;
+}
+
+.resultsSection img {
+  width: 100%;
 }

@@ -38,6 +38,10 @@ h2 {
 	margin-bottom: 10%;
 }
 
+h3{
+	@include fontSize(15);
+}
+
 legend {
 	@include fontSize(20);
 }
