@@ -159,19 +159,23 @@ sortingHat.init = function() {
 		$(this).toggleClass("activeButton");
 	})
 
+	$("fieldset").on("click", function(){
+		$(this).fadeOut(1000);
+	})
+
 	$("input").on("click", function (event) {
 	
 		const _val = $(this).val();
 		
 		if (_val) {
 			sortingHat.mbptTraits[_val]++;
+			console.log(_val)
 		}
+
+		// $("fieldset").fadeOut(1000);
 		
 		
 		// add class .disabled attribute
-		// $("fieldset").animate({
-		// 	scrollBottom: $( $(this).class(".question").offset().top), 500 )
-		// })
 
 		
 	});
