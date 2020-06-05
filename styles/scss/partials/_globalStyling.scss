@@ -31,10 +31,15 @@ h1 {
 	@include fontSize(80);
 	
 	margin: 0;
+
+	@media (max-width: 768px) {
+		@include fontSize(60);
+	}
 }
 
 h2 {
 	@include fontSize(40);
+	
 	margin-bottom: 10%;
 }
 

@@ -105,8 +105,10 @@ const _shResultsArray = sortingHat.resultsArray;
 // Create my conditional logic to run upon page submit
 
 function toggleDisplay() {
-	$(".questionsSection").addClass("displayDisabled");
+	// $(".questionsSection").addClass("displayDisabled");
+	$(".questionsSection").fadeOut();
 	$(".resultsSection").removeClass("displayDisabled");
+	
 
 }
 
@@ -129,8 +131,6 @@ function returnHouse() {
 	$(".imageContainer img").attr("src", usersCrest);
 	$(".mbptResults").text(usersHouse);
 	$(".mbptDescription").text(usersDescription);
-
-	// toggleDisplay();
 };
 
 
@@ -142,7 +142,7 @@ sortingHat.init = function() {
 	})
 
 	$("fieldset").on("click", function(){
-		$(this).fadeOut(1000);
+		$(this).fadeOut(800);
 	})
 
 	$("input").on("click", function (event) {
@@ -194,18 +194,3 @@ $(document).ready(function(){
 	sortingHat.init();
 });
 
-//🐥🐥🐥🐥
-	
-// A BIG Thank you to Whitney Rosenberg from Noun Project for these amazing house crests!
-
-// Hufflepuff crest 
-// https://thenounproject.com/term/harry-potter/1704951/
-
-// Slytherin crest 
-// https://thenounproject.com/term/harry-potter/1704952/
-
-// Gryffindor crest 
-// https://thenounproject.com/term/harry-potter/1704953/
-
-// Ravenclaw crest 
-// https://thenounproject.com/term/harry-potter/1704954/

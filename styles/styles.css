@@ -268,6 +268,13 @@ h1 {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+}
+
 h2 {
   font-size: 40px;
   font-size: 4rem;
@@ -325,6 +332,13 @@ header section {
   padding: 2%;
   width: 55%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  header section {
+    margin: auto;
+    width: 90%;
+  }
 }
 
 .questionsSection {
@@ -503,6 +517,9 @@ form .activeButton {
 .resultsSection .mbptDescription {
   font-size: 25px;
   font-size: 2.5rem;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 10px;
+  padding: 5%;
 }
 
 .resultsSection .mbptDescription,

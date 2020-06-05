@@ -28,6 +28,11 @@
 
 	.mbptDescription {
 		@include fontSize(25);
+
+		background-color: $accentColor;
+		border-radius: 10px;
+
+		padding: 5%;
 	}
 
 	.mbptDescription,
