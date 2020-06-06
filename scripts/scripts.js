@@ -104,15 +104,22 @@ const _shResultsArray = sortingHat.resultsArray;
 
 // Create my conditional logic to run upon page submit
 
-function toggleDisplay() {
-	// $(".questionsSection").addClass("displayDisabled");
-	$(".questionsSection").fadeOut();
-	$(".resultsSection").removeClass("displayDisabled");
+sortingHat.toggleDisplay = function(displayDisable, displayEnable) {
 	
+	displayDisable.fadeOut();
+	displayEnable.removeClass("displayDisabled")
 
+	
 }
 
-function returnHouse() {
+sortingHat.scrollDown = function(toSection) {
+	
+		$("html, body").animate({
+			scrollTop: $(toSection).offset().top
+		}, "slow");
+}
+
+sortingHat.returnHouse = function() {
 	// Take array and turn into a STR to compare to keys in .houses
 	
 	sortingHat.resultsString = sortingHat.resultsArray.join("");
@@ -128,7 +135,7 @@ function returnHouse() {
 	
 	// Display to the DOM, bc witchcraft
 
-	$(".imageContainer img").attr("src", usersCrest);
+	$(".imageContainer img").attr("src", usersCrest).attr("alt", `${usersHouse} crest`);
 	$(".mbptResults").text(usersHouse);
 	$(".mbptDescription").text(usersDescription);
 };
@@ -137,25 +144,29 @@ function returnHouse() {
 
 // Create my gameplan to execute once page has loaded
 sortingHat.init = function() {
+
+	$(".startButton").on("click", function(event) {
+		
+		sortingHat.scrollDown(".questionsSection");
+	})
+
 	$("label").on("click", function(){
+		
 		$(this).toggleClass("activeButton");
 	})
 
 	$("fieldset").on("click", function(){
+		
 		$(this).fadeOut(800);
 	})
 
 	$("input").on("click", function (event) {
-	
-		const _val = $(this).val();
 		
-		if (_val) {
-			sortingHat.mbptTraits[_val]++;
-			console.log(_val)
-		}
+		sortingHat.mbptTraits[$(this).val()]++;
 	});
 
 	$("button[type='submit']").on("click", function(event){
+		
 		event.preventDefault();
 
 		const _traits = sortingHat.mbptTraits;
@@ -183,9 +194,9 @@ sortingHat.init = function() {
 		} else if (_traits["perceptive"] < _traits["judging"]) {
 			_shResultsArray.push("J");
 		}
-		
-		toggleDisplay();
-		returnHouse();
+
+		sortingHat.scrollDown(".resultsSection");
+		sortingHat.returnHouse();
 	});
 };
 

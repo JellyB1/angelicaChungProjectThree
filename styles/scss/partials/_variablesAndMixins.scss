@@ -3,8 +3,6 @@ $secondaryFontColor: #F9F9F9;
 
 $accentColor: rgba(245,245,245,0.8);
 $secondaryAccentColor: #D00000;
-// $activeColor: ;
-// $disabledColor: ;
 
 @mixin fontSize($sizeValue){
 	font-size: $sizeValue * 1px;
