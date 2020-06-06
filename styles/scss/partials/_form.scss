@@ -21,9 +21,10 @@ form {
 		border-radius: 10px;
 
 		position: absolute;
-		top: 10vh;
+		top: 5%;
 		left: 5%;
 		right:5%;
+		
 
 		display: flex;
 		flex-flow: column wrap;
@@ -32,7 +33,7 @@ form {
 
 		margin: auto;		
 
-		height: 60vh;
+		height: 80vh;
 		min-height: 520px;
 
 		width: 80%;
@@ -42,7 +43,7 @@ form {
 			
 			margin: 10px ;
 			
-			// height: 30%;
+			height: 30%;
 			
 			margin-bottom: 20px;
 			width: 85%;
@@ -53,7 +54,7 @@ form {
 
 		label {
 	
-			margin-bottom: 3%;
+			margin-bottom: 5%;
 			
 			width: 90%;
 		}
@@ -77,12 +78,14 @@ form {
 	form {
 
 		fieldset {
-			text-align: left;
+
+			left: 0;
 
 			padding: 0;
 
-			height: 70vh;
+			height: 90vh;
 			
+			width: 100%;
 
 		}
 	}

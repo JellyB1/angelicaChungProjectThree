@@ -1,7 +1,9 @@
 // Create my namescape object
+
 const sortingHat = {};
 
 // Create an object to hold all my trait variables, keep it clean!
+
 sortingHat.mbptTraits = {
 	extrovert: 0,
 	introvert: 0,
@@ -14,6 +16,7 @@ sortingHat.mbptTraits = {
 };
 
 // Boom! All the data in one spot to parse easily
+
 sortingHat.houses = {
 	ENFJ: {
 		crest: "./styles/assets/gryffindorCrest.svg",
@@ -104,14 +107,6 @@ const _shResultsArray = sortingHat.resultsArray;
 
 // Create my conditional logic to run upon page submit
 
-sortingHat.toggleDisplay = function(displayDisable, displayEnable) {
-	
-	displayDisable.fadeOut();
-	displayEnable.removeClass("displayDisabled")
-
-	
-}
-
 sortingHat.scrollDown = function(toSection) {
 	
 		$("html, body").animate({
@@ -143,6 +138,7 @@ sortingHat.returnHouse = function() {
 
 
 // Create my gameplan to execute once page has loaded
+
 sortingHat.init = function() {
 
 	$(".startButton").on("click", function(event) {
