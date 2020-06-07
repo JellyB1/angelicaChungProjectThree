@@ -386,13 +386,13 @@ form fieldset {
 }
 
 form fieldset h2 {
-  margin: 100px auto 20px;
+  margin: 10% auto 2%;
   height: 30%;
   width: 85%;
 }
 
 form fieldset h3 {
-  margin: 50px auto auto;
+  margin: 3% auto auto;
 }
 
 form fieldset label {
