@@ -24,8 +24,7 @@ legend {
 button:hover,
 button:focus,
 label:hover,
-label:focus,
-input:focus {
+label:focus-within {
 	border: 3px solid $secondaryAccentColor;
 	cursor: pointer;
 }
