@@ -191,6 +191,7 @@ sortingHat.init = function() {
 			_shResultsArray.push("J");
 		}
 
+		$(".resultsSection").removeClass("displayDisabled");
 		sortingHat.scrollDown(".resultsSection");
 		sortingHat.returnHouse();
 	});
