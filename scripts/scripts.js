@@ -156,16 +156,17 @@ sortingHat.init = function() {
 	$("input").on("click", function (event) {
 		
 		sortingHat.mbptTraits[$(this).val()]++;
-		console.log($(this).val());
+		$(this).toggleClass("activeButton");
+		console.log($(this).val())
 	});
 
-	$("input").on("keypress", function(event) {
+	// $("input").on("keypress", function(event) {
 		
-		event.preventDefault();
-		sortingHat.mbptTraits[$(this).val()]++;
-		$(this).toggleClass("activeButton");
-		console.log($(this).val());
-	})
+	// 	event.preventDefault();
+	// 	sortingHat.mbptTraits[$(this).val()]++;
+	// 	$(this).toggleClass("activeButton");
+	// 	console.log($(this).val())
+	// })
 
 	
 
