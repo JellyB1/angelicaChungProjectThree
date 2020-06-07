@@ -6,6 +6,8 @@
 	margin: auto ;
 
 	h2 {
+		@include fontSize(40);
+		
 		margin-top: 0;
 		padding: 10%;
 	}

@@ -41,20 +41,24 @@ form {
 		
 		h2 {
 			
-			margin: 10px ;
+			
+			margin: 100px auto 20px;
 			
 			height: 30%;
-			
-			margin-bottom: 20px;
 
 			width: 85%;
 
 		}
 
+		h3 {
+			margin: 50px auto auto;
+		}
+
 		label {
 	
-			margin-bottom: 5%;
-			
+			// margin-bottom: 5%;
+			margin: 0 auto 5%;
+
 			width: 90%;
 		}
 	}
@@ -112,4 +116,5 @@ form {
 .question18 {z-index: 15;}
 .question19 {z-index: 10;}
 .question20 {z-index: 5;}
+.btn {z-index: 0;}
 

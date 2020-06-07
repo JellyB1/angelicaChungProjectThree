@@ -387,14 +387,17 @@ form fieldset {
 }
 
 form fieldset h2 {
-  margin: 10px;
+  margin: 100px auto 20px;
   height: 30%;
-  margin-bottom: 20px;
   width: 85%;
 }
 
+form fieldset h3 {
+  margin: 50px auto auto;
+}
+
 form fieldset label {
-  margin-bottom: 5%;
+  margin: 0 auto 5%;
   width: 90%;
 }
 
@@ -499,6 +502,10 @@ form .activeButton {
   z-index: 5;
 }
 
+.btn {
+  z-index: 0;
+}
+
 .resultsSection {
   background: url("./assets/paper.jpg") no-repeat center;
   background-size: cover;
@@ -506,6 +513,8 @@ form .activeButton {
 }
 
 .resultsSection h2 {
+  font-size: 40px;
+  font-size: 4rem;
   margin-top: 0;
   padding: 10%;
 }
