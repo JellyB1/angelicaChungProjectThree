@@ -1,4 +1,6 @@
 html {
+	@include mainFont();
+
 	color: $mainFontColor;
 	font-size: 10px;
 }
@@ -35,6 +37,11 @@ h1 {
 	@media (max-width: 768px) {
 		@include fontSize(60);
 	}
+}
+
+h1,
+.resultsSection h2 {
+	@include logoFont();
 }
 
 h2 {

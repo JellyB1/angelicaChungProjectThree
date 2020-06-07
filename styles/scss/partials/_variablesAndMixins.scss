@@ -8,3 +8,12 @@ $secondaryAccentColor: #D00000;
 	font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;
 }
+
+@mixin logoFont() {
+	font-family: 'Bad Script', cursive;
+}
+
+@mixin mainFont() {
+	font-family: 'Raleway', sans-serif;
+}
+

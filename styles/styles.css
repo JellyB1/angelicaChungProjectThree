@@ -236,6 +236,7 @@ html {
 }
 
 html {
+  font-family: 'Raleway', sans-serif;
   color: #2B2D2F;
   font-size: 10px;
 }
@@ -273,6 +274,11 @@ h1 {
     font-size: 60px;
     font-size: 6rem;
   }
+}
+
+h1,
+.resultsSection h2 {
+  font-family: 'Bad Script', cursive;
 }
 
 h2 {
