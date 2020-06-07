@@ -30,10 +30,13 @@ form {
 		margin: auto;		
 
 		height: 80vh;
-		// min-height: 520px;
+		
 
 		width: 80%;
 
+		&:focus-within {
+			border: 3px $backgroundColorDark groove; 
+		}
 		
 		h2 {	
 			margin: 10% auto 2%;
