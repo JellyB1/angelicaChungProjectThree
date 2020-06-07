@@ -140,26 +140,34 @@ sortingHat.returnHouse = function() {
 // Create my gameplan to execute once page has loaded
 
 sortingHat.init = function() {
-
-	$(".startButton").on("click", function(event) {
-		
+	
+	$(".startButton").on("click", function(event) {	
 		sortingHat.scrollDown(".questionsSection");
 	})
 
 	$("label").on("click", function(){
-		
 		$(this).toggleClass("activeButton");
 	})
 
 	$("fieldset").on("click", function(){
-		
 		$(this).fadeOut(800);
 	})
 
 	$("input").on("click", function (event) {
 		
 		sortingHat.mbptTraits[$(this).val()]++;
+		console.log($(this).val());
 	});
+
+	$("input").on("keypress", function(event) {
+		
+		event.preventDefault();
+		sortingHat.mbptTraits[$(this).val()]++;
+		$(this).toggleClass("activeButton");
+		console.log($(this).val());
+	})
+
+	
 
 	$("button[type='submit']").on("click", function(event){
 		

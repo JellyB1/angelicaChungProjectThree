@@ -1,0 +1,24 @@
+.accessibleView {
+	background: $backgroundColor;
+
+	form {
+		position: static;
+
+		height: auto;
+	}
+
+	fieldset {
+		position: static;
+	}
+
+	fieldset:focus-within {
+		border: 5px $backgroundColorDark solid;
+	}
+
+	
+
+	button {
+		position: static;
+	}
+}
+

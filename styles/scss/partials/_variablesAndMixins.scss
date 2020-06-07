@@ -4,6 +4,9 @@ $secondaryFontColor: #F9F9F9;
 $accentColor: rgba(245,245,245,0.8);
 $secondaryAccentColor: #D00000;
 
+$backgroundColor: #CFAB86;
+$backgroundColorDark: darken($backgroundColor, 20%);
+
 @mixin fontSize($sizeValue){
 	font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;

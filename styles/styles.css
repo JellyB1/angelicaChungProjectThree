@@ -258,7 +258,8 @@ legend {
 button:hover,
 button:focus,
 label:hover,
-label:focus {
+label:focus,
+input:focus {
   border: 3px solid #D00000;
   cursor: pointer;
 }
@@ -503,6 +504,27 @@ form .activeButton {
 
 .btn {
   z-index: 0;
+}
+
+.accessibleView {
+  background: #CFAB86;
+}
+
+.accessibleView form {
+  position: static;
+  height: auto;
+}
+
+.accessibleView fieldset {
+  position: static;
+}
+
+.accessibleView fieldset:focus-within {
+  border: 5px #ab7844 solid;
+}
+
+.accessibleView button {
+  position: static;
 }
 
 .resultsSection {

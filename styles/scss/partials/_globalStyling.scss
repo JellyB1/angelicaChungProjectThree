@@ -24,7 +24,8 @@ legend {
 button:hover,
 button:focus,
 label:hover,
-label:focus {
+label:focus,
+input:focus {
 	border: 3px solid $secondaryAccentColor;
 	cursor: pointer;
 }
@@ -62,6 +63,7 @@ legend {
 label {
 	@include fontSize(25);
 }
+
 
 p {
 	@include fontSize(30);
