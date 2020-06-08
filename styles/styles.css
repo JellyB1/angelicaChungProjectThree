@@ -404,7 +404,7 @@ form fieldset label {
   width: 90%;
 }
 
-form button {
+form .btnSubmit {
   position: absolute;
   left: calc(50% - 50px);
   right: calc(50% - 50px);
