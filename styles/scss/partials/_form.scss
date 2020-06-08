@@ -16,6 +16,7 @@ form {
 		background-color: $secondaryFontColor;
 		border: none;
 		border-radius: 10px;
+		border: 3px $secondaryFontColor groove;
 
 		position: absolute;
 		top: 5%;
@@ -31,7 +32,6 @@ form {
 
 		height: 80vh;
 		
-
 		width: 80%;
 
 		&:focus-within {
@@ -39,7 +39,7 @@ form {
 		}
 		
 		h2 {	
-			margin: 10% auto 2%;
+			margin: 5% auto 2%;
 			
 			height: 30%;
 
@@ -47,7 +47,7 @@ form {
 		}
 
 		h3 {	
-			margin: 3% auto auto;
+			margin: 3% auto;
 		}
 	}
 	.questionBtn {
@@ -60,7 +60,7 @@ form {
 		left: calc(50% - 50px);
 		right: calc(50% - 50px);
 		top: calc(50% - 30px);	
-		
+
 		margin: auto;
 	}
 }

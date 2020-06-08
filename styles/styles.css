@@ -349,6 +349,7 @@ form fieldset {
   background-color: #F9F9F9;
   border: none;
   border-radius: 10px;
+  border: 3px #F9F9F9 groove;
   position: absolute;
   top: 5%;
   left: 5%;
@@ -376,13 +377,13 @@ form fieldset:focus-within {
 }
 
 form fieldset h2 {
-  margin: 10% auto 2%;
+  margin: 5% auto 2%;
   height: 30%;
   width: 85%;
 }
 
 form fieldset h3 {
-  margin: 3% auto auto;
+  margin: 3% auto;
 }
 
 form .questionBtn {
