@@ -135,8 +135,6 @@ sortingHat.returnHouse = function() {
 	$(".mbptDescription").text(usersDescription);
 };
 
-
-
 // Create my gameplan to execute once page has loaded
 
 sortingHat.init = function() {
@@ -145,20 +143,84 @@ sortingHat.init = function() {
 		sortingHat.scrollDown(".questionsSection");
 	})
 
-	$("label").on("click", function(){
+	// $("input").on("click", function(){
+	// 	$(this).toggleClass("activeButton");
+	// })
+
+	$("input").focus(function(){
 		$(this).toggleClass("activeButton");
 	})
 
-	$("fieldset").on("click", function(){
-		$(this).fadeOut(800);
+	$("fieldset").on({
+		mouseup: function(){
+			$(this).fadeOut(800);
+			// $("input").on({
+			// 	mousedown: function(){
+			// 		sortingHat.mbptTraits[$(this).val()]++;
+			// 		$(this).off(event);
+			// 		console.log($(this).val())
+			// 	}
+				
+			// })
+		},
+		keydown: function(event){
+			if (event.key == "Enter") {
+				event.preventDefault();
+				$(this).fadeOut(800);
+			}
+		}
 	})
 
-	$("input").on("click", function (event) {
+	// $("label input")
+	$("input").on({
+		mousedown: function(){
+			sortingHat.mbptTraits[$("input").val()]++;
+			// $(this).off(event);
+			console.log($("input").val(), "ckicj")
+
+			
+		},
+		keydown: function(event) {
+			if (event.key == "Enter") {
+				event.preventDefault();
+				sortingHat.mbptTraits[$(this).val()]++;
+				$(this).off(event);
+				console.log($(this).val())
+			}
+		}
+	})
+
+	// $("input").on("click", function () {
+	// 	sortingHat.mbptTraits[$(this).val()]++;
+	// 	$(this).off(event);
+	// 	console.log($(this).val())
+	// })
+
+	// $("input").on("click", function(){
+		// sortingHat.mbptTraits[$(this).val()]++;
+		// $(this).toggleClass("activeButton");
+		// console.log($(this).val())
+	// })
+
+
+	// $("fieldset").on("click", function(){
+	// 	$(this).fadeOut(800);
+	// })
+
+	
+
+	// $("input").on("change", function (event) {
 		
-		sortingHat.mbptTraits[$(this).val()]++;
-		$(this).toggleClass("activeButton");
-		console.log($(this).val())
-	});
+	// 	sortingHat.mbptTraits[$(this).val()]++;
+	// 	$(this).toggleClass("activeButton");
+	// 	console.log($(this).val())
+	// });
+
+	// $("label").mousedown(function(){
+	// 	sortingHat.mbptTraits[$(this "input").val()]++;
+	// 	$(this).toggleClass("activeButton");
+	// 	console.log($(this "input").val());
+	// });
 
 	// $("input").on("keypress", function(event) {
 		
