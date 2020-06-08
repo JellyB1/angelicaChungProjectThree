@@ -5,9 +5,7 @@ html {
 	font-size: 10px;
 }
 
-button,
-label,
-legend {
+button {
 	@include fontSize(20);
 
 	border: 3px solid $mainFontColor;
@@ -22,9 +20,7 @@ legend {
 }
 
 button:hover,
-button:focus,
-label:hover,
-label:focus-within {
+button:focus {
 	border: 3px solid $secondaryAccentColor;
 	cursor: pointer;
 }
@@ -54,15 +50,6 @@ h2 {
 h3{
 	@include fontSize(15);
 }
-
-legend {
-	@include fontSize(20);
-}
-
-label {
-	@include fontSize(25);
-}
-
 
 p {
 	@include fontSize(30);

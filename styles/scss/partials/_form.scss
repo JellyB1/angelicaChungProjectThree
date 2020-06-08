@@ -49,12 +49,10 @@ form {
 		h3 {	
 			margin: 3% auto auto;
 		}
-
-		label {
-			margin: 0 auto 5%;
-
-			width: 90%;
-		}
+	}
+	.questionBtn {
+		margin: 0 auto 5%;
+		width: 90%;
 	}
 
 	.btnSubmit {
@@ -62,12 +60,8 @@ form {
 		left: calc(50% - 50px);
 		right: calc(50% - 50px);
 		top: calc(50% - 30px);	
-
+		
 		margin: auto;
-	}
-
-	.activeButton {
-		border: 3px solid $secondaryAccentColor;
 	}
 }
 

@@ -142,7 +142,7 @@ sortingHat.init = function() {
 	$(".startButton").on("click", function(event) {	
 		sortingHat.scrollDown(".questionsSection");
 	})
-	
+
 	$("fieldset").on("click", function(){
 		$(this).fadeOut(800);
 	})
@@ -153,7 +153,6 @@ sortingHat.init = function() {
 		const _val = $(this).val();
 		
 		sortingHat.mbptTraits[_val]++;
-		console.log(sortingHat.mbptTraits);
 	})
 
 	$("button[type='submit']").on("click", function(event){

@@ -241,9 +241,7 @@ html {
   font-size: 10px;
 }
 
-button,
-label,
-legend {
+button {
   font-size: 20px;
   font-size: 2rem;
   border: 3px solid #2B2D2F;
@@ -256,9 +254,7 @@ legend {
 }
 
 button:hover,
-button:focus,
-label:hover,
-label:focus-within {
+button:focus {
   border: 3px solid #D00000;
   cursor: pointer;
 }
@@ -290,16 +286,6 @@ h2 {
 h3 {
   font-size: 15px;
   font-size: 1.5rem;
-}
-
-legend {
-  font-size: 20px;
-  font-size: 2rem;
-}
-
-label {
-  font-size: 25px;
-  font-size: 2.5rem;
 }
 
 p {
@@ -399,7 +385,7 @@ form fieldset h3 {
   margin: 3% auto auto;
 }
 
-form fieldset label {
+form .questionBtn {
   margin: 0 auto 5%;
   width: 90%;
 }
@@ -410,10 +396,6 @@ form .btnSubmit {
   right: calc(50% - 50px);
   top: calc(50% - 30px);
   margin: auto;
-}
-
-form .activeButton {
-  border: 3px solid #D00000;
 }
 
 @media (max-width: 768px) {
