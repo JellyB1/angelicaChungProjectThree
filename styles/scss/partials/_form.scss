@@ -16,7 +16,7 @@ form {
 		background-color: $secondaryFontColor;
 		border: none;
 		border-radius: 10px;
-		border: 3px $secondaryFontColor groove;
+		border: 5px $secondaryFontColor groove;
 
 		position: absolute;
 		top: 5%;
@@ -35,7 +35,7 @@ form {
 		width: 80%;
 
 		&:focus-within {
-			border: 3px $backgroundColorDark groove; 
+			border: 5px $backgroundColorDark groove; 
 		}
 		
 		h2 {	

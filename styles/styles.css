@@ -244,7 +244,7 @@ html {
 button {
   font-size: 20px;
   font-size: 2rem;
-  border: 3px solid #2B2D2F;
+  border: 5px solid #2B2D2F;
   border-radius: 10px;
   background-color: #2B2D2F;
   color: #F9F9F9;
@@ -255,7 +255,7 @@ button {
 
 button:hover,
 button:focus {
-  border: 3px solid #D00000;
+  border: 5px solid #D00000;
   cursor: pointer;
 }
 
@@ -349,7 +349,7 @@ form fieldset {
   background-color: #F9F9F9;
   border: none;
   border-radius: 10px;
-  border: 3px #F9F9F9 groove;
+  border: 5px #F9F9F9 groove;
   position: absolute;
   top: 5%;
   left: 5%;
@@ -373,7 +373,7 @@ form fieldset {
 }
 
 form fieldset:focus-within {
-  border: 3px #ab7844 groove;
+  border: 5px #ab7844 groove;
 }
 
 form fieldset h2 {

@@ -8,7 +8,7 @@ html {
 button {
 	@include fontSize(20);
 
-	border: 3px solid $mainFontColor;
+	border: 5px solid $mainFontColor;
 	border-radius: 10px;
 	
 	background-color: $mainFontColor;
@@ -21,7 +21,7 @@ button {
 
 button:hover,
 button:focus {
-	border: 3px solid $secondaryAccentColor;
+	border: 5px solid $secondaryAccentColor;
 	cursor: pointer;
 }
 
